@@ -21,7 +21,7 @@ public abstract class Figuras {
     }
 
    
-    
+    //METODOS 
    protected abstract double calcularPerimetro();
    //si se pone llaves, genera un error, los metodos abstractos no puede 
    //obtener cuerpo

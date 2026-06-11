@@ -15,6 +15,8 @@ public  class Circulo extends Figuras {
     //extends se usa para heredar
     // para que error desaparezca se imprementa esos metodos
     
+    
+    //SE RETIRARON LOS ATRIBUTOS PORQUE SE PUEDEN CALCULAR 
     private double radio;
     
     private static final double PI = Math.PI;
@@ -23,7 +25,7 @@ public  class Circulo extends Figuras {
         return radio;
     }
 
-    public double getDiametro() {
+    protected double getDiametro() {
         return calcularDiametro();
     }
 
@@ -35,16 +37,15 @@ public  class Circulo extends Figuras {
         this.radio = radio;
     }
     
-    private double calcularDiametro() {
-       
-        return radio*2;
-    }
-    
     //CONSTRUCTOR 
     public Circulo(double radio){
         this.radio=radio;
     }
 
+    private double calcularDiametro() {
+        return radio*2;
+    }
+    
     //Imprementacion
     @Override
     protected double calcularPerimetro() {
