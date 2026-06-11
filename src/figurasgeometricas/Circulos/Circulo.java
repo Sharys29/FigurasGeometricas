@@ -16,7 +16,7 @@ public  class Circulo extends Figuras {
     // para que error desaparezca se imprementa esos metodos
     
     private double radio;
-    private double diametro;
+    
     private static final double PI = Math.PI;
 
     public double getRadio() {
@@ -24,7 +24,7 @@ public  class Circulo extends Figuras {
     }
 
     public double getDiametro() {
-        return diametro;
+        return calcularDiametro();
     }
 
     public static double getPI() {
@@ -35,9 +35,9 @@ public  class Circulo extends Figuras {
         this.radio = radio;
     }
     
-    public double calcularDiametro() {
-       this.diametro=radio*2;
-        return diametro;
+    private double calcularDiametro() {
+       
+        return radio*2;
     }
     
     //CONSTRUCTOR 
@@ -47,15 +47,15 @@ public  class Circulo extends Figuras {
 
     //Imprementacion
     @Override
-    public double calcularPerimetro() {
-        this.perimetro=2*Circulo.PI*this.radio;
-        return perimetro;
+    protected double calcularPerimetro() {
+      return 2*Circulo.PI*this.radio;
+        
     }
     
      @Override
-    public double calcularArea(){
-        this.area=Math.pow(radio, 2)*Circulo.PI;
-        return area;
+    protected double calcularArea(){
+        return  Math.pow(radio, 2)*Circulo.PI;
+       
         //POW ES UN METODO STATIC
     }
     //se agrega override por que se da un polimorfismo sobre escritura
