@@ -61,4 +61,9 @@ public  class Circulo extends Figuras {
     }
     //se agrega override por que se da un polimorfismo sobre escritura
     
+    //Se agrega el metodo toString siempre es publico
+    public String toString(){
+        return "Circulo{\nRadio: " + radio + "\ndiametro: " + getDiametro() + 
+                "\nPerimetro: " + getPerimetro() + "\nArea: " + getArea() + "\n";
+    }
 }
